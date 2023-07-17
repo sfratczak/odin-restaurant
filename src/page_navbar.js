@@ -42,15 +42,17 @@ export default function loadNavBar() {
     const navItemLink = document.createElement("a");
     navItemLink.textContent = itemName;
     navItemLink.classList.add(itemClassName);
+    navItemLink.href = "#";
 
     if (itemName !== "github") {
-      navItemLink.href = "#";
       navItemLink.onclick = () => {
         clearPage();
         loadPage(itemClassName);
       };
     } else {
-      navItemLink.href = "https://github.com/sfratczak";
+      navItemLink.onclick = () => {
+        window.open("https://github.com/sfratczak", "_blank");
+      };
     }
 
     navItem.appendChild(navItemLink);
