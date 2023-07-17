@@ -8,6 +8,7 @@ export default function loadPageHome() {
 
   const img = new Image();
   img.src = HomeImage;
+  img.alt = "Home Image";
 
   const mainHeading = document.createElement("h1");
   mainHeading.textContent = "Fancy Feast";

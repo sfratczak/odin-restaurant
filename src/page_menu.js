@@ -8,6 +8,7 @@ export default function loadPageMenu() {
 
   const img = new Image();
   img.src = MenuImage;
+  img.alt = "Menu Image";
 
   const mainHeading = document.createElement("h1");
   mainHeading.textContent = "Our Menu";

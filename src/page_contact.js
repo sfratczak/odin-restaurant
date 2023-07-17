@@ -8,6 +8,7 @@ export default function loadPageContact() {
 
   const img = new Image();
   img.src = ContactImage;
+  img.alt = "Contact Image";
 
   const mainHeading = document.createElement("h1");
   mainHeading.textContent = "Contact Us";
