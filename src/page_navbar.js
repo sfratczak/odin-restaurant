@@ -1,4 +1,5 @@
 import loadPageHome from "./page_home";
+import loadPageMenu from "./page_menu";
 
 const navItems = {
   //itemName: className
@@ -21,8 +22,8 @@ function loadPage(className) {
       loadPageHome();
       break;
     case "nav-menu":
-    // loadPageMenu();
-    // break;
+      loadPageMenu();
+      break;
     case "nav-contact":
       // loadPageContact();
       // break;
@@ -41,7 +42,7 @@ export default function loadNavBar() {
     const navItemLink = document.createElement("a");
     navItemLink.textContent = itemName;
     navItemLink.classList.add(itemClassName);
-    navItemLink.href = "";
+    navItemLink.href = "#";
     navItemLink.onclick = () => {
       clearPage();
       loadPage(itemClassName);
