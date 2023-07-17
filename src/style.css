@@ -32,9 +32,10 @@ h2 {
 }
 p {
   line-height: 1.5;
-  max-width: 548px;
+  max-width: 528px;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  white-space: pre-wrap;
   color: var(--brown_light);
   margin-bottom: 2rem;
 }
