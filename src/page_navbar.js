@@ -7,6 +7,7 @@ const navItems = {
   home: "nav-home",
   menu: "nav-menu",
   contact: "nav-contact",
+  github: "nav-github",
 };
 
 function clearPage() {
@@ -28,8 +29,6 @@ function loadPage(className) {
     case "nav-contact":
       loadPageContact();
       break;
-
-      return false;
   }
 }
 
@@ -43,11 +42,16 @@ export default function loadNavBar() {
     const navItemLink = document.createElement("a");
     navItemLink.textContent = itemName;
     navItemLink.classList.add(itemClassName);
-    navItemLink.href = "#";
-    navItemLink.onclick = () => {
-      clearPage();
-      loadPage(itemClassName);
-    };
+
+    if (itemName !== "github") {
+      navItemLink.href = "#";
+      navItemLink.onclick = () => {
+        clearPage();
+        loadPage(itemClassName);
+      };
+    } else {
+      navItemLink.href = "https://github.com/sfratczak";
+    }
 
     navItem.appendChild(navItemLink);
     navList.appendChild(navItem);
