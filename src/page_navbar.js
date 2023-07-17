@@ -1,5 +1,6 @@
 import loadPageHome from "./page_home";
 import loadPageMenu from "./page_menu";
+import loadPageContact from "./page_contact";
 
 const navItems = {
   //itemName: className
@@ -25,8 +26,8 @@ function loadPage(className) {
       loadPageMenu();
       break;
     case "nav-contact":
-      // loadPageContact();
-      // break;
+      loadPageContact();
+      break;
 
       return false;
   }
