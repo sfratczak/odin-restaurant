@@ -8,13 +8,15 @@
   --background: #efeade;
   --brown_dark: #0d0900;
   --brown_light: #4f4224;
+  --bg_gradient: linear-gradient(to bottom, #efeade 0%, #ada48d 100%);
 }
 
 body {
   font-family: "Lora", serif;
   display: flex;
   justify-content: center;
-  background-color: var(--brown_dark);
+  background-color: var(--background);
+  background: var(--bg_gradient);
 }
 
 h1,
@@ -74,9 +76,10 @@ nav a {
 
 #content {
   width: 960px;
-  min-height: calc(1000dvh - 3rem);
+  min-height: calc(100dvh - 3rem);
   margin-top: 3rem;
   background-color: var(--background);
+  box-shadow: 0px 0px 16px -8px var(--brown_light);
 }
 
 img {
